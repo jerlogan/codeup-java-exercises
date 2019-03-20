@@ -1,20 +1,27 @@
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
-        int i = 5;
-        while (i <= 15) {
+
+        for (int i = 5; i <=15; i++) {
             System.out.println(i);
-            i++;
+        }
+        for (int z = 0; z < 101; z+=2) {
+            System.out.println(z);
+        }
+        for (int x = 100; x > -11; x-=5) {
+            System.out.println(x);
+        }
+        for (int w = 2; w < 1000000; w++) {
+            int v = w * w;
+
+            System.out.println(v * v);
+            if (v >= 1000000) {
+                break;
+            }
         }
 
-        int z = 0;
-        do {
-            System.out.println(z);
-            z +=2;
-        } while(z < 99);
-        do {
-            System.out.println(z);
-             z -= 5;
-        } while (z > -11);
+
 
 
     }
