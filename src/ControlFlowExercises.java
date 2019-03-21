@@ -14,14 +14,9 @@ public class ControlFlowExercises {
         }
 
 
-
-
-        for (int y = 2; y <= 65535; y *= y  ) {
+        for (long y = 2; y <= 1000000; y *= y) {
             System.out.println(y);
         }
-
-
-
 
 
         for (int s = 1; s <= 100; s++) {
