@@ -1,6 +1,8 @@
+package oop;
+
 public class Person {
-   private String name;
-   Person(String nameInput) {
+   public String name;
+   public Person(String nameInput) {
        name = nameInput;
    }
 
