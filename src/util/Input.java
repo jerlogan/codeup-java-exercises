@@ -1,4 +1,5 @@
 package util;
+import java.math.BigInteger;
 import java.util.Scanner;
 
 
@@ -18,12 +19,14 @@ public class Input {
 
     }
     public int getInt () {
-        if (scanner.hasNextInt()) {
-            return scanner.nextInt();
+        String string;
+        try {
+            string = scanner.next();
+            return Integer.valueOf(string);
+        } catch (NumberFormatException e) {
+            System.out.println("Enter an integer you bastard!");
+            return getInt();
         }
-        scanner.next();
-        System.out.println("Enter an integer you bastard!");
-        return getInt();
     }
     public int getInt(int min, int max) {
         int userInt = getInt();
@@ -35,7 +38,14 @@ public class Input {
         }
     }
     public double getDouble () {
-        return scanner.nextDouble();
+        String string;
+        try {
+            string = scanner.next();
+            return Integer.valueOf(string);
+        } catch (NumberFormatException e) {
+            System.out.println("Enter a double you friggin idiot- Napoleon Dynamite");
+            return getDouble();
+        }
     }
 
     public double getDouble (double min, double max) {
@@ -45,6 +55,18 @@ public class Input {
         }
         else {
             return getDouble(min, max);
+        }
+    }
+
+    public double getBinary () {
+        double binaryToDouble;
+        try {
+            String string = scanner.nextLine();
+            binaryToDouble = Double.longBitsToDouble(new BigInteger(string, 2).longValue());
+            return binaryToDouble;
+        } catch (Exception e) {
+            System.out.println("Your number isn't binary bruh.");
+            return getBinary();
         }
     }
 

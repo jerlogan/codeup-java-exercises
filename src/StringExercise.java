@@ -13,14 +13,6 @@ public class StringExercise {
         String backlashes = "I can do backslashes \\, double backslashes \\\\,\n" +
                 "and the amazing triple backslash \\\\\\!";
         System.out.println(backlashes);
-
-
-
-
-
-
-
-
     }
 }
 

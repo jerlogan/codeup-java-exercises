@@ -23,8 +23,5 @@ public class CircleApp {
             System.out.println(makeAnotherCircle);
 
         } while(makeAnotherCircle);
-
-
-
     }
 }
